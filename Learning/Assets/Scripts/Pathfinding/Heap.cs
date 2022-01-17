@@ -1,8 +1,8 @@
 ﻿using System;
 public class Heap<T> where T : IHeapItem<T>
 {
-    T[] items;
-    int currentItemCount;
+    private T[] items;
+    private int currentItemCount;
     public Heap(int maxheapSize)
     {
         items = new T[maxheapSize];
@@ -69,7 +69,7 @@ public class Heap<T> where T : IHeapItem<T>
         {
             int childindexLeft = (item.HeapIndex * 2) + 1;
             int childindexRight = (item.HeapIndex * 2) + 2;
-            int swapIndex = 0;
+            int swapIndex;
             if (childindexLeft < currentItemCount)
             {
                 swapIndex = childindexLeft;
