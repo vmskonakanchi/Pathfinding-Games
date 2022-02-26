@@ -12,6 +12,8 @@ public class Noise : MonoBehaviour
     private void Start()
     {
         noiseImage = GetComponent<MeshRenderer>();
+        offsetX = Random.Range(0, width);
+        offsetY = Random.Range(0, height);
     }
 
     private void Update()
